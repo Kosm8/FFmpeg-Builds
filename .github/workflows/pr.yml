@@ -1,5 +1,6 @@
 name: Test Full Build
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - master
@@ -11,8 +12,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win64]
-        variant: [gpl,lgpl,gpl vulkan,lgpl vulkan,gpl 4.3,lgpl 4.3,gpl-shared,lgpl-shared,gpl-shared vulkan,lgpl-shared vulkan,gpl-shared 4.3,lgpl-shared 4.3]
+        target: [win32]
+        variant: [gpl,gpl-shared,gpl 4.3]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
