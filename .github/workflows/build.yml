@@ -10,7 +10,7 @@ on:
 jobs:
   purge_artifacts:
     name: Purge old artifacts
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Purge old artifacts
         uses: c-hive/gha-remove-artifacts@v1
@@ -19,7 +19,7 @@ jobs:
           skip-recent: 3
   build_base:
     name: Build base image
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -41,11 +41,11 @@ jobs:
   build_target_bases:
     name: Build target base image
     needs: build_base
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
-        target: [win64]
+        target: [win32]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -67,12 +67,12 @@ jobs:
   build_targets:
     name: Build target-variant image
     needs: build_target_bases
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
-        target: [win64]
-        variant: [gpl,lgpl,gpl vulkan,lgpl vulkan,gpl 4.3,lgpl 4.3,gpl-shared,lgpl-shared,gpl-shared vulkan,lgpl-shared vulkan,gpl-shared 4.3,lgpl-shared 4.3]
+        target: [win32]
+        variant: [gpl,gpl-shared,gpl 4.3]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -98,12 +98,12 @@ jobs:
   build_ffmpeg:
     name: Build ffmpeg
     needs: build_targets
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
-        target: [win64]
-        variant: [gpl,lgpl,gpl vulkan,lgpl vulkan,gpl 4.3,lgpl 4.3,gpl-shared,lgpl-shared,gpl-shared vulkan,lgpl-shared vulkan,gpl-shared 4.3,lgpl-shared 4.3]
+        target: [win32]
+        variant: [gpl,gpl-shared,gpl 4.3]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -124,7 +124,7 @@ jobs:
     name: Publish release
     if: github.event_name != 'push'
     needs: build_ffmpeg
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
