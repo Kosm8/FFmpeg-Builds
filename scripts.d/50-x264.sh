@@ -1,7 +1,7 @@
 #!/bin/bash
 
 X264_REPO="https://code.videolan.org/videolan/x264.git"
-X264_COMMIT="4121277b40a667665d4eea1726aefdc55d12d110"
+X264_COMMIT="59c06095de90db362b959a4975d8cc6f1566dbdb"
 
 ffbuild_enabled() {
     [[ $VARIANT == gpl* ]] || return -1
