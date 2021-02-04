@@ -1,7 +1,8 @@
 #!/bin/bash
 
 X265_REPO="https://github.com/videolan/x265.git"
-X265_COMMIT="419182243fb2e2dfbe91dfc45a51778cf704f849"
+X265_BRANCH="Release_3.5"
+X265_COMMIT="dec564a2478332e8e02fe3933f36cf6852221187"
 
 ffbuild_enabled() {
     [[ $VARIANT == gpl* ]] || return -1
@@ -14,7 +15,7 @@ ffbuild_dockerstage() {
 }
 
 ffbuild_dockerbuild() {
-    git clone "$X265_REPO" x265
+    git clone -b "$X265_BRANCH" "$X265_REPO" x265
     cd x265
     git checkout "$X265_COMMIT"
 
