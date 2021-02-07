@@ -6,7 +6,7 @@ X265_COMMIT="02d2f496c94c0ef253766b826d95af3404b2781e"
 
 ffbuild_enabled() {
     [[ $VARIANT == gpl* ]] || return -1
-    return 0
+    return -1
 }
 
 ffbuild_dockerstage() {
