@@ -2,6 +2,7 @@
 
 ffbuild_enabled() {
     [[ $TARGET == win* ]]
+    return -1
 }
 
 ffbuild_dockerstage() {
