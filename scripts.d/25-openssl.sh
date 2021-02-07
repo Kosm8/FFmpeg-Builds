@@ -51,3 +51,11 @@ ffbuild_dockerbuild() {
     cd ..
     rm -rf openssl
 }
+
+ffbuild_configure() {
+    echo --enable-openssl
+}
+
+ffbuild_unconfigure() {
+    echo --disable-openssl
+}
