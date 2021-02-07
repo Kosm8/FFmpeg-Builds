@@ -1,7 +1,8 @@
 #!/bin/bash
 
 X264_REPO="https://code.videolan.org/videolan/x264.git"
-X264_COMMIT="59c06095de90db362b959a4975d8cc6f1566dbdb"
+X264_BRANCH="stable"
+X264_COMMIT="544c61f082194728d0391fb280a6e138ba320a96"
 
 ffbuild_enabled() {
     [[ $VARIANT == gpl* ]] || return -1
@@ -14,7 +15,7 @@ ffbuild_dockerstage() {
 }
 
 ffbuild_dockerbuild() {
-    git-mini-clone "$X264_REPO" "$X264_COMMIT" x264
+    git-mini-clone -b "$X264_BRANCH" "$X264_REPO" "$X264_COMMIT" x264
     pushd x264
 
     local myconf=(
