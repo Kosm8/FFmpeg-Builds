@@ -4,7 +4,7 @@ AMF_REPO="https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git"
 AMF_COMMIT="2366f74d0038e575828daab501632984de9295e6"
 
 ffbuild_enabled() {
-    return 0
+    return -1
 }
 
 ffbuild_dockerstage() {
