@@ -4,7 +4,7 @@ VORBIS_REPO="https://github.com/xiph/vorbis.git"
 VORBIS_COMMIT="83a82dd9296400d811b78c06e9ca429e24dd1e5c"
 
 ffbuild_enabled() {
-    return 0
+    return -1
 }
 
 ffbuild_dockerstage() {
