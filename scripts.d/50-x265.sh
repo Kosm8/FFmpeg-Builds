@@ -17,7 +17,6 @@ ffbuild_dockerstage() {
 ffbuild_dockerbuild() {
     git clone -b "$X265_BRANCH" "$X265_REPO" x265
     cd x265
-    git checkout "$X265_COMMIT"
 
     if [[ $TARGET != *32 ]]; then
         mkdir 8bit 10bit 12bit
