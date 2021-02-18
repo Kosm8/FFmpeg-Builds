@@ -5,8 +5,8 @@ X265_BRANCH="Release_3.4"
 X265_COMMIT=""
 
 ffbuild_enabled() {
-    [[ $VARIANT == gpl* ]] || return -1
-    return -1
+    [[ $TARGET == win64 ]] || return -1
+    return 0
 }
 
 ffbuild_dockerstage() {
