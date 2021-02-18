@@ -3,7 +3,6 @@
 XVID_SRC="https://downloads.xvid.com/downloads/xvidcore-1.3.7.tar.gz"
 
 ffbuild_enabled() {
-    [[ $VARIANT == gpl* ]] || return -1
     return -1
 }
 
