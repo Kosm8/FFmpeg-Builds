@@ -1,4 +1,4 @@
-name: Build FFmpeg
+name: Build GPL FFmpeg
 
 on:
   workflow_dispatch: 
