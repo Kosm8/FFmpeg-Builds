@@ -4,7 +4,7 @@ MFX_REPO="https://github.com/lu-zero/mfx_dispatch.git"
 MFX_COMMIT="2cd279f1e8a277c843025c8713c6ed3b4c42b032"
 
 ffbuild_enabled() {
-    return 0
+    return -1
 }
 
 ffbuild_dockerstage() {
