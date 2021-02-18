@@ -4,7 +4,6 @@ X264_REPO="https://code.videolan.org/videolan/x264.git"
 X264_BRANCH="stable"
 
 ffbuild_enabled() {
-    [[ $VARIANT == gpl* ]] || return -1
     return 0
 }
 
