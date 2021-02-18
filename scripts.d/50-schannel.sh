@@ -1,7 +1,6 @@
 #!/bin/bash
 
 ffbuild_enabled() {
-    [[ $TARGET == win* ]]
     return -1
 }
 
