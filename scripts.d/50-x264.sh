@@ -1,6 +1,6 @@
 #!/bin/bash
 
-X264_REPO="https://code.videolan.org/videolan/x264.git"
+X264_REPO="https://github.com/mirror/x264.git"
 X264_BRANCH="stable"
 
 ffbuild_enabled() {
