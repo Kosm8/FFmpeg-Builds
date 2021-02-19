@@ -42,13 +42,6 @@ ffbuild_dockerbuild() {
 
     sed -i 's/Libs.private:/Libs.private: -lstdc++/' "$FFBUILD_PREFIX"/lib/pkgconfig/libvmaf.pc
 
-    if [[ $TARGET == win* ]]; then
-        rm "$FFBUILD_PREFIX"/bin/libvmaf* "$FFBUILD_PREFIX"/lib/libvmaf.dll.a
-    else
-        echo "Unknown target"
-        return -1
-    fi
-
     cd ../..
     rm -rf vmaf
 }
