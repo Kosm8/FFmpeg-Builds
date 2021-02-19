@@ -1,7 +1,7 @@
 #!/bin/bash
 
 AVISYNTH_REPO="https://github.com/AviSynth/AviSynthPlus.git"
-AVISYNTH_COMMIT="a8c863005d8e0cd7b8f74932df1533ded0b7280b"
+AVISYNTH_COMMIT="ae2e995f3abc4fe88b30c666498086d7f20d7659"
 
 ffbuild_enabled() {
     return 0
