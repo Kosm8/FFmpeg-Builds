@@ -18,6 +18,9 @@ ffbuild_dockerbuild() {
 
     mkdir cmbuild && cd cmbuild
 
+    # Workaround broken build system
+    export CFLAGS="$CFLAGS -pthread -I/opt/ffbuild/include/libvmaf"
+
     cmake -DCMAKE_TOOLCHAIN_FILE="$FFBUILD_CMAKE_TOOLCHAIN" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$FFBUILD_PREFIX" -DBUILD_SHARED_LIBS=OFF -DENABLE_EXAMPLES=NO -DENABLE_TESTS=NO -DENABLE_TOOLS=NO -DCONFIG_TUNE_VMAF=1 .. || return -1
     make -j$(nproc) || return -1
     make install || return -1
