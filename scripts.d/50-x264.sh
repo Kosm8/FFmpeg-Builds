@@ -2,7 +2,7 @@
 
 X264_REPO="https://github.com/mirror/x264.git"
 X264_BRANCH="stable"
-X264_COMMIT=""
+X264_COMMIT="HEAD"
 
 ffbuild_enabled() {
     return 0
