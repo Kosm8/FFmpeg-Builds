@@ -1,4 +1,4 @@
-FF_CONFIGURE="--enable-nonfree --enable-version3 --disable-debug"
+FF_CONFIGURE="--enable-gpl --enable-nonfree --enable-version3 --disable-debug"
 FF_CFLAGS=""
 FF_CXXFLAGS=""
 FF_LDFLAGS=""
