@@ -2,7 +2,7 @@
 
 X265_REPO="https://bitbucket.org/multicoreware/x265_git.git"
 X265_BRANCH="Release_3.4"
-X265_COMMIT=""
+X265_COMMIT="57022ba54264f0e90a5172d4aa42ceb9b4124ba3"
 
 ffbuild_enabled() {
     [[ $TARGET == win64 ]] || return -1
