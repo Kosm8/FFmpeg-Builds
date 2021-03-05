@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LIBVPX_REPO="https://chromium.googlesource.com/webm/libvpx"
-LIBVPX_COMMIT="ebefb90b75f07ea5ab06d6b2a5ea5355c843d266"
+LIBVPX_COMMIT="56b1a197b265bc13b8fb8c6df85556185b188f9b"
 
 ffbuild_enabled() {
     return 0
