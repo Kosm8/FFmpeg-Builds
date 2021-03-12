@@ -4,6 +4,7 @@ OPENSSL_REPO="https://github.com/openssl/openssl.git"
 OPENSSL_COMMIT="OpenSSL_1_1_1j"
 
 ffbuild_enabled() {
+    [[ $VARIANT != nonfree* ]] && return -1
     return 0
 }
 
