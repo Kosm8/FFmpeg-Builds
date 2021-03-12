@@ -2,15 +2,6 @@
 
 Static Windows Builds of ffmpeg master and latest release branch.
 
-## Auto-Builds
-
-Builds run daily at 12:00 UTC and are automatically released on success.
-
-### Release Retention Policy
-
-- The last build of each month is kept for two years.
-- The last 14 daily builds are kept.
-
 ## Package List
 
 For a list of included dependencies check the scripts.d directory.
@@ -35,9 +26,9 @@ On success, the resulting zip file will be in the `artifacts` subdir.
 
 ### Targets, Variants and Addins
 
-The two available targets are `win64` and `win32`.
+The two available targets are `win32` and `win64`.
 
-Available in `gpl`, `lgpl`, `gpl-shared` and `lgpl-shared` variants.
+Available in `gpl` and `nonfree` variants.
 
 All of those can be optionally combined with any combination of addins.
 Currently that's `4.3`, to build from the 4.3 release branch instead of master.
