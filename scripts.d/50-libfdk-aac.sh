@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FDK-AAC_REPO="https://github.com/mstorsjo/fdk-aac.git"
-FDK-AAC_COMMIT="0a90c09e00c3f6238efe8c89daf2c7e55ea4f011"
+FDKAAC_REPO="https://github.com/mstorsjo/fdk-aac.git"
+FDKAAC_COMMIT="0a90c09e00c3f6238efe8c89daf2c7e55ea4f011"
 
 ffbuild_enabled() {
     return 0
@@ -13,8 +13,8 @@ ffbuild_dockerstage() {
 }
 
 ffbuild_dockerbuild() {
-    git-mini-clone "$FDK-AAC_REPO" "$FDK-AAC_COMMIT" fdk-aac
-    cd fdk-aac
+    git-mini-clone "$FDKAAC_REPO" "$FDKAAC_COMMIT" fdkaac
+    cd fdkaac
 
     ./autogen.sh || return -1
 
@@ -38,7 +38,7 @@ ffbuild_dockerbuild() {
     make install || return -1
 
     cd ..
-    rm -rf fdk-aac
+    rm -rf fdkaac
 }
 
 ffbuild_configure() {
