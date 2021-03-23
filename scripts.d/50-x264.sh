@@ -1,7 +1,7 @@
 #!/bin/bash
 
 X264_REPO="https://github.com/mirror/x264.git"
-X264_BRANCH="stable"
+X264_BRANCH="master"
 
 ffbuild_enabled() {
     return 0
