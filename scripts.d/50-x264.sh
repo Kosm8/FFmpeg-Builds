@@ -1,7 +1,7 @@
 #!/bin/bash
 
 X264_REPO="https://github.com/mirror/x264.git"
-X264_BRANCH="master"
+X264_COMMIT="b86ae3c66f51ac9eab5ab7ad09a9d62e67961b8a"
 
 ffbuild_enabled() {
     return 0
@@ -13,7 +13,7 @@ ffbuild_dockerstage() {
 }
 
 ffbuild_dockerbuild() {
-    git clone -b "$X264_BRANCH" --single-branch "$X264_REPO" x264
+    git-mini-clone "$X264_REPO" x264
     pushd x264
 
     local myconf=(
