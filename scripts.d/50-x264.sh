@@ -13,7 +13,7 @@ ffbuild_dockerstage() {
 }
 
 ffbuild_dockerbuild() {
-    git-mini-clone "$X264_REPO" x264
+    git-mini-clone "$X264_REPO" "$X264_COMMIT" x264
     pushd x264
 
     local myconf=(
