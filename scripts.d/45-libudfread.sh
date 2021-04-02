@@ -4,7 +4,7 @@ LIBUDFREAD_REPO="https://code.videolan.org/videolan/libudfread.git"
 LIBUDFREAD_COMMIT="2ba6fa9a0acfcb1c65284d4e923be57982841b39"
 
 ffbuild_enabled() {
-    return -1
+    return 0
 }
 
 ffbuild_dockerstage() {
