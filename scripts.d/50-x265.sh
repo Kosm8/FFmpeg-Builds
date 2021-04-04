@@ -5,7 +5,7 @@ X265_BRANCH="Release_3.5"
 X265_COMMIT="ce882936d5f62ea94c13972fa42cab6192864a7d"
 
 ffbuild_enabled() {
-    [[ $TARGET == win64 ]] || return -1
+    [[ $TARGET == win32 ]] && return -1
     return 0
 }
 
@@ -58,9 +58,6 @@ EOF
     fi
 
     make install
-
-    cd ../..
-    rm -rf x265
 }
 
 ffbuild_configure() {

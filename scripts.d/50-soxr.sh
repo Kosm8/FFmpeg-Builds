@@ -24,9 +24,6 @@ ffbuild_dockerbuild() {
     cmake -DCMAKE_TOOLCHAIN_FILE="$FFBUILD_CMAKE_TOOLCHAIN" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$FFBUILD_PREFIX" -DBUILD_TESTS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_SHARED_LIBS=OFF ..
     make -j$(nproc)
     make install
-
-    cd ../..
-    rm -rf soxr
 }
 
 ffbuild_configure() {

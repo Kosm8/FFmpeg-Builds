@@ -4,7 +4,6 @@
 RUBBERBAND_SRC="https://breakfastquay.com/files/releases/rubberband-1.9.1.tar.bz2"
 
 ffbuild_enabled() {
-    [[ $VARIANT == gpl* ]] || return -1
     return 0
 }
 
@@ -47,9 +46,6 @@ ffbuild_dockerbuild() {
 
     # Fix static linking
     echo "Requires.private: fftw3 samplerate" >> "$FFBUILD_PREFIX"/lib/pkgconfig/rubberband.pc
-
-    cd ../../..
-    rm -rf rubberband
 }
 
 ffbuild_configure() {

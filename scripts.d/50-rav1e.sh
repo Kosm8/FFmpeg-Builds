@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RAV1E_REPO="https://github.com/xiph/rav1e.git"
-RAV1E_COMMIT="d6e4b5c714f107f9cc6991d44927fd029ba53a72"
+RAV1E_COMMIT="29a9c604879bc27d319edc03e2c97ba9e9628c86"
 
 ffbuild_enabled() {
     [[ $TARGET == win32 ]] && return -1
@@ -23,9 +23,6 @@ ffbuild_dockerbuild() {
         --library-type=staticlib \
         --crt-static \
         --release
-
-    cd ..
-    rm -rf rav1e
 }
 
 ffbuild_configure() {
