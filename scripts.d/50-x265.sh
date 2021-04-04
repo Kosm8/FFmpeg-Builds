@@ -15,7 +15,7 @@ ffbuild_dockerstage() {
 }
 
 ffbuild_dockerbuild() {
-    git clone -b "$X265_BRANCH" --single-branch "$X265_REPO" x265
+    git clone -b "$X265_BRANCH" "$X265_REPO" x265
     cd x265
     git checkout "$X265_COMMIT"
 
