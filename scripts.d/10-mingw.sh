@@ -1,7 +1,8 @@
 #!/bin/bash
 
 MINGW_REPO="https://github.com/mirror/mingw-w64.git"
-MINGW_COMMIT="2afb89e6a651f9c5749d9de492a263e03ba1e94e"
+# Clamp before autoconf 2.71 which is not available on ubuntu.
+MINGW_COMMIT="7faa2f348c838f2043a40ae7acca913b94607d5c"
 
 ffbuild_enabled() {
     [[ $TARGET == win* ]] || return -1
