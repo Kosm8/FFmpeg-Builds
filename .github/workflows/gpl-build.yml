@@ -1,9 +1,12 @@
 name: Build GPL FFmpeg
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   repository_dispatch:
     types: [build]
+
+env:
+  DOCKER_BUILDKIT: 1
 
 jobs:
   purge_artifacts:

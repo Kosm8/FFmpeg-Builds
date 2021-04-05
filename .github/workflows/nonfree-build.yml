@@ -5,6 +5,9 @@ on:
   repository_dispatch:
     types: [build]
 
+env:
+  DOCKER_BUILDKIT: 1
+  
 jobs:
   purge_artifacts:
     name: Purge old artifacts
