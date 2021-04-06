@@ -1,5 +1,6 @@
 #!/bin/bash
 set -xe
+shopt -s globstar
 cd "$(dirname "$0")"
 source util/vars.sh
 
@@ -23,7 +24,7 @@ done
 
 export FFBUILD_PREFIX="$(docker run --rm "$IMAGE" bash -c 'echo $FFBUILD_PREFIX')"
 
-for script in scripts.d/*.sh; do
+for script in scripts.d/**/*.sh; do
     FF_CONFIGURE+=" $(get_output $script configure)"
     FF_CFLAGS+=" $(get_output $script cflags)"
     FF_CXXFLAGS+=" $(get_output $script cxxflags)"
@@ -58,7 +59,7 @@ docker run --rm -i "${UIDARGS[@]}" -v $PWD/ffbuild:/ffbuild "$IMAGE" bash -s <<E
 
     ./configure --prefix=/ffbuild/prefix --pkg-config-flags="--static" \$FFBUILD_TARGET_FLAGS $FF_CONFIGURE --extra-cflags="$FF_CFLAGS" --extra-cxxflags="$FF_CXXFLAGS" --extra-ldflags="$FF_LDFLAGS" --extra-libs="$FF_LIBS"
     make -j\$(nproc)
-    make install    
+    make install
 EOF
 
 mkdir -p artifacts
