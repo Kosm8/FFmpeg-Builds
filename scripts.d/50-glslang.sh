@@ -1,7 +1,7 @@
 #!/bin/bash
 
 GLSLANG_REPO="https://github.com/KhronosGroup/glslang.git"
-GLSLANG_COMMIT="5878bcb17e43bf22cecaf6095900a33ff7f53445"
+GLSLANG_COMMIT="1481399549c55c2b9f04a468a6d95ca92fd7458b"
 
 ffbuild_enabled() {
     [[ $ADDINS_STR == *4.3* ]] && return -1
