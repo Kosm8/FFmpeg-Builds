@@ -5,7 +5,6 @@ SVTAV1_COMMIT="f9699bd0f75d6eb52579e147c8ce140f122091fb"
 
 ffbuild_enabled() {
     [[ $TARGET == win32 ]] && return -1
-    [[ $ADDINS_STR == *4.3* ]] && return -1
     return 0
 }
 
@@ -26,6 +25,5 @@ ffbuild_configure() {
 }
 
 ffbuild_unconfigure() {
-    [[ $ADDINS_STR == *4.3* ]] && return 0
     echo --disable-libsvtav1
 }
