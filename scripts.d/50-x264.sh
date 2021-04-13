@@ -1,7 +1,7 @@
 #!/bin/bash
 
 X264_REPO="https://github.com/mirror/x264.git"
-X264_COMMIT="b86ae3c66f51ac9eab5ab7ad09a9d62e67961b8a"
+X264_COMMIT="55d517bc4569272a2c9a367a4106c234aba2ffbc"
 
 ffbuild_enabled() {
     return 0
