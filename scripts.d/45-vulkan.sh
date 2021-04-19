@@ -4,7 +4,7 @@ LOADER_REPO="https://github.com/KhronosGroup/Vulkan-Loader.git"
 LOADER_COMMIT="64cc17099c41622646e81d5b46cc537e47361f28"
 
 ffbuild_enabled() {
-    return 0
+    return -1
 }
 
 ffbuild_dockerstage() {

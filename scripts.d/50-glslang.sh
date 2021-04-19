@@ -4,7 +4,7 @@ GLSLANG_REPO="https://github.com/KhronosGroup/glslang.git"
 GLSLANG_COMMIT="ed948c8e1226372ac5f6725e0bc797d66692c58b"
 
 ffbuild_enabled() {
-    return 0
+    return -1
 }
 
 ffbuild_dockerbuild() {
