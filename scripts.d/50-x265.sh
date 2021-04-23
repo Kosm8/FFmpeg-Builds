@@ -5,8 +5,7 @@ X265_BRANCH="Release_3.5"
 X265_COMMIT="ce882936d5f62ea94c13972fa42cab6192864a7d"
 
 ffbuild_enabled() {
-    [[ $TARGET == win32 ]] && return -1
-    return 0
+    return -1
 }
 
 ffbuild_dockerbuild() {
