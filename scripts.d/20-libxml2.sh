@@ -13,6 +13,11 @@ ffbuild_dockerbuild() {
 
     local myconf=(
         --prefix="$FFBUILD_PREFIX"
+        --without-catalog
+        --without-debug
+        --without-docbook
+        --without-history
+        --without-html
         --without-python
         --disable-maintainer-mode
         --disable-shared

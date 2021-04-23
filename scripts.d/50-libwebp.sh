@@ -27,6 +27,7 @@ ffbuild_dockerbuild() {
         --disable-jpeg
         --disable-tiff
         --disable-gif
+        --disable-wic
     )
 
     if [[ $TARGET == win* ]]; then

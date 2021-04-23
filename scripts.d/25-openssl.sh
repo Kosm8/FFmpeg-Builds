@@ -16,6 +16,7 @@ ffbuild_dockerbuild() {
         threads
         zlib
         no-shared
+        no-tests
         enable-camellia
         enable-ec
         enable-srp
