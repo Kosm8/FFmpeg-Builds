@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOADER_REPO="https://github.com/KhronosGroup/Vulkan-Loader.git"
-LOADER_COMMIT="8e3f63f525a964c39da46632fbecc5937bfe758b"
+LOADER_COMMIT="d0f1abe22e7a6233c02437993fa1d185021bd171"
 
 ffbuild_enabled() {
     return -1
