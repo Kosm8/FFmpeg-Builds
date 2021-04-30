@@ -4,7 +4,7 @@ AVISYNTH_REPO="https://github.com/AviSynth/AviSynthPlus.git"
 AVISYNTH_COMMIT="e18e487c8374f645330ef30c0a613601fe22f9d4"
 
 ffbuild_enabled() {
-    return 0
+    return -1
 }
 
 ffbuild_dockerbuild() {
