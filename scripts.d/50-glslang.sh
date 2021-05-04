@@ -1,7 +1,7 @@
 #!/bin/bash
 
 GLSLANG_REPO="https://github.com/KhronosGroup/glslang.git"
-GLSLANG_COMMIT="56b17b2f2dfc71b3f1b823e94b13bd13ec1fba12"
+GLSLANG_COMMIT="41e39c615b1478c4cce2ca06a6f7f291e2249f83"
 
 ffbuild_enabled() {
     return -1
