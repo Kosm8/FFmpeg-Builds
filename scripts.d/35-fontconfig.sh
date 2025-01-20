@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://gitlab.freedesktop.org/fontconfig/fontconfig.git"
-SCRIPT_COMMIT="cfef47622357564d804b99dbde2993ee221fa4c2"
+SCRIPT_COMMIT="main"
 
 ffbuild_enabled() {
     return 0
@@ -40,9 +40,9 @@ ffbuild_dockerbuild() {
 }
 
 ffbuild_configure() {
-    echo --enable-fontconfig
+    echo --enable-libfontconfig
 }
 
 ffbuild_unconfigure() {
-    echo --disable-fontconfig
+    echo --disable-libfontconfig
 }
