@@ -1,7 +1,8 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://git.code.sf.net/p/mingw-w64/mingw-w64.git"
-SCRIPT_COMMIT="7939d61c6c63cf841fea515aabe5a12394980198"
+#SCRIPT_REPO="https://github.com/mingw-w64/mingw-w64.git"
+SCRIPT_COMMIT="master"
 
 ffbuild_enabled() {
     [[ $TARGET == win* ]] || return -1
@@ -28,10 +29,7 @@ ffbuild_dockerbuild() {
 
     cd mingw-w64-headers
 
-    unset CFLAGS
-    unset CXXFLAGS
-    unset LDFLAGS
-    unset PKG_CONFIG_LIBDIR
+    unset CFLAGS CXXFLAGS LDFLAGS PKG_CONFIG_LIBDIR
 
     if [[ -z "$COMPILER_SYSROOT" ]]; then
         COMPILER_SYSROOT="$(${CC} -print-sysroot)/usr/${FFBUILD_TOOLCHAIN}"

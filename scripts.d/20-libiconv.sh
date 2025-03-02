@@ -1,10 +1,10 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://git.savannah.gnu.org/git/libiconv.git"
-SCRIPT_COMMIT="d68ea07b28aa3c8d1959358b7da7e7f3ba148319"
+SCRIPT_COMMIT="master"
 
 SCRIPT_REPO2="https://git.savannah.gnu.org/git/gnulib.git"
-SCRIPT_COMMIT2="7c53496c448c3dd5fdae5ae691172583b09e6a20"
+SCRIPT_COMMIT2="master"
 
 ffbuild_enabled() {
     return 0
