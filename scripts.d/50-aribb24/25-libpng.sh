@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://github.com/glennrp/libpng.git"
-SCRIPT_COMMIT="34005e3d3d373c0c36898cc55eae48a79c8238a1"
+SCRIPT_COMMIT="libpng16"
 
 ffbuild_enabled() {
     return 0
