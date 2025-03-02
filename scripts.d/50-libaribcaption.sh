@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://github.com/xqq/libaribcaption.git"
-SCRIPT_COMMIT="27cf3cab26084d636905335d92c375ecbc3633ea"
+SCRIPT_COMMIT="master"
 
 ffbuild_enabled() {
     [[ $ADDINS_STR == *4.4* ]] && return -1
