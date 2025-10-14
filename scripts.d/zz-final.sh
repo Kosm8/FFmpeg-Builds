@@ -13,7 +13,6 @@ ffbuild_depends() {
     echo opencl
     echo vulkan
     echo aribb24
-    echo chromaprint
     echo dav1d
     echo fdk-aac
     echo ffnvcodec
