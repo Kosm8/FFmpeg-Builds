@@ -24,7 +24,6 @@ ffbuild_depends() {
     echo libzmq
     echo schannel
     echo srt
-    echo whisper
     echo zimg
     echo zvbi
 }
