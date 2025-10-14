@@ -30,7 +30,7 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-REPO="${GITHUB_REPOSITORY:-btbn/ffmpeg-builds}"
+REPO="${GITHUB_REPOSITORY:-kosm8/ffmpeg-builds}"
 REPO="${REPO,,}"
 REGISTRY="${REGISTRY_OVERRIDE:-ghcr.io}"
 BASE_IMAGE="${REGISTRY}/${REPO}/base:latest"
@@ -39,27 +39,6 @@ IMAGE="${REGISTRY}/${REPO}/${TARGET}-${VARIANT}${ADDINS_STR:+-}${ADDINS_STR}:lat
 
 ffbuild_ffver() {
     case "$ADDINS_STR" in
-    *4.3*)
-        echo 403
-        ;;
-    *4.4*)
-        echo 404
-        ;;
-    *5.0*)
-        echo 500
-        ;;
-    *5.1*)
-        echo 501
-        ;;
-    *6.0*)
-        echo 600
-        ;;
-    *6.1*)
-        echo 601
-        ;;
-    *7.0*)
-        echo 700
-        ;;
     *7.1*)
         echo 701
         ;;
