@@ -27,8 +27,6 @@ ffbuild_depends() {
     echo whisper
     echo zimg
     echo zvbi
-
-    echo rpath
 }
 
 ffbuild_enabled() {
